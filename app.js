@@ -31,7 +31,26 @@ function* sayNamees() {
 
 const names = sayNamees();
 
-console.log(names.next());
-console.log(names.next());
-console.log(names.next());
-console.log(names.next());
+// console.log(names.next());
+// console.log(names.next());
+// console.log(names.next());
+// console.log(names.next());
+
+// ID Creator
+function* createId() {
+  let index = 0;
+
+  while (true) {
+    yield index++;
+  }
+}
+
+const gen = createId();
+
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
